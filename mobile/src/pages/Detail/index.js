@@ -41,8 +41,8 @@ export default function Detail() {
                 <Text style={[styles.incidentProperty, {marginTop:0}]}>ONG:</Text>
                 <Text style={styles.incidentValue}>{incident.name}</Text>
 
-                <Text style={styles.incidentProperty}>CASO:</Text>
-                <Text style={styles.incidentValue}>{incident.title}</Text>
+                <Text style={styles.incidentProperty}>DESCRIÇÃO:</Text>
+                <Text style={styles.incidentValue}>{incident.description}</Text>
 
                 <Text style={styles.incidentProperty}>VALOR:</Text>
                 <Text style={styles.incidentValue}>{Intl.NumberFormat('pr-BR',{ style: 'currency', currency:'BRL'}).format(incident.value)}</Text>

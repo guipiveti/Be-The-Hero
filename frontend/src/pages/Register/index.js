@@ -48,7 +48,7 @@ export default function Register() {
                     <p>Faça seu cadastro, entre na plataforma e ajude outras pessoas a encontrarem os casos da sua ONG.</p>
                     <Link className="back-link" to="/">
                         <FiArrowLeft size={16} color="#E02041" />
-                        Não tenho cadastro
+                        Voltar
                     </Link>
                 </section>
 
@@ -64,13 +64,13 @@ export default function Register() {
                         onChange={e=>setEmail(e.target.value)}
                     />
                     <input
-                        placeholder="whatsapp"
+                        placeholder="Whatsapp"
                         value={whatsapp}
                         onChange={e=>setWhatsapp(e.target.value)}
                     />
                     <div className="input-group">
                         <input
-                            placeholder="city"
+                            placeholder="Cidade"
                             value={city}
                             onChange={e=>setCity(e.target.value)}
                         />

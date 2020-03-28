@@ -17,7 +17,7 @@ module.exports = {
     async index(request, response) {
         const { page = 1 } = request.query;
         const [count] = await db_connection('incidents').count();
-        console.log(count);
+        //console.log(count);
         const incidents = await db_connection('incidents').join('ongs', 'ongs.id', '=', 'incidents.ong_id').limit(5).offset(5 * (page - 1))
             .select([
                 'incidents.*',
