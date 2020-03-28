@@ -1,0 +1,13 @@
+[0326/224104.451:ERROR:process_info.cc(329)] VirtualQueryEx: Acesso negado. (0x5)
+[0326/224104.453:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0326/224104.453:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[0326/224104.454:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Tentou-se acessar um processo de saída. (0xc000010a)
+[0326/231550.312:ERROR:process_info.cc(329)] VirtualQueryEx: Acesso negado. (0x5)
+[0326/231550.314:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0326/231550.314:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Tentou-se acessar um processo de saída. (0xc000010a)
+[0327/140752.357:ERROR:process_info.cc(329)] VirtualQueryEx: Acesso negado. (0x5)
+[0327/140752.360:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0327/140752.361:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Tentou-se acessar um processo de saída. (0xc000010a)
+[0327/143003.065:ERROR:process_info.cc(329)] VirtualQueryEx: Acesso negado. (0x5)
+[0327/143003.068:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0327/143003.069:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Tentou-se acessar um processo de saída. (0xc000010a)
