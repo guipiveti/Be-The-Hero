@@ -1,0 +1,12 @@
+Database:
+	Knex - Escrever códigos para SQL
+	npx knex migrate:make create_ongs
+	Cria as mudanças
+	npx knex migrate:latest
+
+Criando traduções(https://medium.com/reactbrasil/internacionaliza%C3%A7%C3%A3o-em-react-native-77fb1a56f8e9):
+	-Intalar dependências:
+		yarn add i18n-js
+		npm install i18n-js
+	-Criar pasta locales com os arquivos de tradução e index.js
+		

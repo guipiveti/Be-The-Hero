@@ -7,6 +7,8 @@ import * as MailComposer from 'expo-mail-composer';
 import logoImg from '../../assets/logo.png';
 import styles from './styles';
 
+import { translate } from '../../locales'
+
 export default function Detail() {
     const navigation = useNavigation();
     const route = useRoute();
@@ -38,20 +40,20 @@ export default function Detail() {
             </View>
 
             <View style={styles.incident}>
-                <Text style={[styles.incidentProperty, {marginTop:0}]}>ONG:</Text>
+                <Text style={[styles.incidentProperty, {marginTop:0}]}>{translate('ngo')}:</Text>
                 <Text style={styles.incidentValue}>{incident.name}</Text>
 
-                <Text style={styles.incidentProperty}>DESCRIÇÃO:</Text>
+                <Text style={styles.incidentProperty}>{translate('description')}:</Text>
                 <Text style={styles.incidentValue}>{incident.description}</Text>
 
-                <Text style={styles.incidentProperty}>VALOR:</Text>
+                <Text style={styles.incidentProperty}>{translate('value')}:</Text>
                 <Text style={styles.incidentValue}>{Intl.NumberFormat('pr-BR',{ style: 'currency', currency:'BRL'}).format(incident.value)}</Text>
 
             </View>
             <View style={styles.contactBox}>
-                <Text style={styles.heroTitle}>Salve o dia!</Text>
-                <Text style={styles.heroTitle}>Seja o herói desse caso.</Text>
-                <Text style={styles.heroDescription}>Entre em contato:</Text>
+                <Text style={styles.heroTitle}>{translate('save_the_day')}</Text>
+                <Text style={styles.heroTitle}>{translate('be_hero')}</Text>
+                <Text style={styles.heroDescription}>{translate('contact')}</Text>
                 <View style={styles.actions}>
                     <TouchableOpacity style={styles.action} onPress={sendWhatsapp}>
                         <Text style={styles.actionText}>Whatsapp</Text>
