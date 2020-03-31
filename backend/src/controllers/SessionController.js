@@ -9,11 +9,4 @@ module.exports = {
         }
         return response.json(ong);
     }
-
-    //     if(ong_id!=incident.ong_id){
-    //         return response.status(401).json({error:'Não autorizado'});
-    //     }
-    //     await db_conection('incidents').where('id', id).delete();
-    //     return response.status(204).send();
-    // }
 }

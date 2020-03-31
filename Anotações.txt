@@ -10,3 +10,10 @@ Criando traduções(https://medium.com/reactbrasil/internacionaliza%C3%A7%C3%A3o-e
 		npm install i18n-js
 	-Criar pasta locales com os arquivos de tradução e index.js
 		
+Criar projeto usando expo:
+    expo init mobile
+Instalar react-navigation/native:
+    npm install @react-navigation/native
+    expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+Instalar o tipo de navegação:
+    npm install @react-navigation/stack

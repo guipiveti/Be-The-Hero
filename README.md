@@ -8,18 +8,19 @@ Project developed during the 11th OmniStack Week promoted by [Rocketseat](https:
 
 ### :chart_with_upwards_trend: Extras
 The project includes the i18n package to allow use in different languages. The application checks the device's language and displays the translated version, when available. If the device`s language is not available, use English version will be used.
+The server also has an integration with **IBM Watson** translation API. When the server receives an Incedent request it sends a response with the title and description translated to the requested language.
 
 ## :rocket: Technologies
-|   Back-End   |            Web  |    Mobile    |
-| :---:        |     :---:       |        :---: |
-| Node.js      | ReactJS         | React Native |
-| SQLite       | Axios           |  Axios       |
-| Nodemon      |                 |  Expo        |
-| Axios        |                 |  i18n        |
-| Jest         |                 |              |
-| Cors         |                 |              |
-| Express.js   |                 |              |
-| Knex         |                 |              |
+|   Back-End   |            Web  |    Mobile        |
+| :---:        |     :---:       |        :---:     |
+| Node.js      | ReactJS         | React Native     |
+| SQLite       | Axios           |  Axios           |
+| Nodemon      |                 |  Expo            |
+| Axios        |                 |  i18n            |
+| Jest         |                 | **IBM Watson**   |
+| Cors         |                 |                  |
+| Express.js   |                 |                  |
+| Knex         |                 |                  |
 
 ## :camera: Screenshots:
 |                           Web                              |                               Mobile                                   |
@@ -31,6 +32,10 @@ The project includes the i18n package to allow use in different languages. The a
 
 ## :computer: Installation
 ### Running the **Back-End**:
+Before running the Back-End you should register to IBM Watson and subscribe to a Language Translator Service API. (The Lite plan is free and has a quota of 1000000 characters/month).
+
+Now you should create a **rename** the **.env.example** file to **.env** and inserting your API Key inside the file.
+Finaly run the following commands:
 ```bash
 cd backend
 npm install

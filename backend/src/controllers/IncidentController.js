@@ -1,4 +1,5 @@
 //const crypto = require('crypto');
+const Watson = require('../../src/services/ibmWatson');
 const db_connection = require('../database/connection');
 
 module.exports = {
@@ -27,6 +28,34 @@ module.exports = {
                 'ongs.city',
                 'ongs.uf']
             );
+
+
+        //if(request.headers.language){
+        if (request.headers.language==='en') {
+            const descriptions = [];
+            incidents.forEach((incident) => { descriptions.push(incident.description) });
+            //console.log(descriptions);
+            
+            const translated_descriptions = await Watson.translate(descriptions, "en");
+            //console.log(translated_descriptions[0].translation);
+
+            const titles = [];
+            incidents.forEach((incident) => { titles.push(incident.title) });
+            //console.log(titles);
+
+            const translated_titles = await Watson.translate(titles, "en");
+            //console.log(translated_titles);
+            
+            incidents.forEach((incident,i)=>{
+                incidents[i].title=translated_titles[i].translation;
+                incidents[i].description=translated_descriptions[i].translation;
+            })
+        }// else {
+        //     console.log("Manter em português");
+        // }
+        console.log(incidents);
+
+
         response.header('X-Total-Count', count["count(*)"]);
         return response.json(incidents);
     },
