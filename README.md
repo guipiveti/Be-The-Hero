@@ -35,7 +35,7 @@ The server also has an integration with **IBM Watson** translation API. When the
 Before running the Back-End you should register to IBM Watson and subscribe to a Language Translator Service API. (The Lite plan is free and has a quota of 1000000 characters/month).
 
 Now you should **rename** the **.env.example** file to **.env** and inserting your API Key inside the file.
-Finaly run the following commands:
+Finally run the following commands:
 ```bash
 cd backend
 npm install
