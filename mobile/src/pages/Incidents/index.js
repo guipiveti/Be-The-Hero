@@ -7,7 +7,7 @@ import api from '../../services/api'
 import logoImg from '../../assets/logo.png';
 import styles from './styles';
 
-import { translate } from '../../locales'
+import { translate, getLanguageByDevice } from '../../locales'
 
 export default function Incidents() {
     const [incidents, setIncidents] = useState([]);
@@ -16,7 +16,7 @@ export default function Incidents() {
     const [loading, setLoading] = useState(false);
 
     const navigation = useNavigation();
-    
+    //console.log(getLanguageByDevice());
     async function loadIncidents(){
         if(loading){
             return;
@@ -29,7 +29,10 @@ export default function Incidents() {
         setLoading(true);
 
         const response = await api.get('/incidents',{
-            params:{page}
+            params:{page},
+            headers:{
+                "language": getLanguageByDevice()
+            }
         });
 
         //setIncidents(response.data);

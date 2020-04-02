@@ -6,7 +6,7 @@ module.exports = {
     async create(request, response) {
         const { title, description, value } = request.body;
         const ong_id = request.headers.authorization;
-
+        
         const [id] = await db_connection('incidents').insert(
             {
                 title, description, value, ong_id
@@ -31,7 +31,7 @@ module.exports = {
 
 
         //if(request.headers.language){
-        if (request.headers.language==='en') {
+        if (request.headers.language==='en_US') {
             const descriptions = [];
             incidents.forEach((incident) => { descriptions.push(incident.description) });
             //console.log(descriptions);
