@@ -34,7 +34,7 @@ The server also has an integration with **IBM Watson** translation API. When the
 ### Running the **Back-End**:
 Before running the Back-End you should register to IBM Watson and subscribe to a Language Translator Service API. (The Lite plan is free and has a quota of 1000000 characters/month).
 
-Now you should create a **rename** the **.env.example** file to **.env** and inserting your API Key inside the file.
+Now you should **rename** the **.env.example** file to **.env** and inserting your API Key inside the file.
 Finaly run the following commands:
 ```bash
 cd backend
